@@ -1,0 +1,32 @@
+C Strings:
+- strings are character arrays that end with a null character (either '' or 0 or
+  '\0')
+- the terminating null character is a convention, string functions will not work
+  correctly without it
+- only single quotes work for the char type; you can't use double quotes
+- array size and string size aren't necessarily the same
+  sizeof(array) returns the array size, not string size
+- chars and ints are interchangable
+- whatever comes after the terminating null is not displayed 
+
+- when you create a literal string using "", an immutable string is created in
+  memory, so if you create the same string literal again, the computer does not
+  need to allocate more memory. these strings are always null terminated
+
+The following are valid ways to declare strings:
+  
+  char s[256];
+     normal array declaration, allocate 256 bytes, nothing is set automatically
+  char s[256] = "imagine";
+     allocates 256 bytes. creates the immutable string "imagine" and then copies
+     it (including the terminating null) into the array
+     if your array size allocation is smaller than the string, uh-oh
+  char s[] = "tuesday";
+     allocates 8 bytes. creates the immutable string "tuesday" and then copies
+     it (inculding the terminating null) into the array
+  char *s = "whatever";
+     creates the immutable string "whatever", and returns a pointer to the 
+     string. Since the pointer is to an immutable string, you can modify the 
+     immutable string this way
+
+you cannot use the equal sign for string assignment after declaration!

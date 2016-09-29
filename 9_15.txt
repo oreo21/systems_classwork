@@ -1,0 +1,29 @@
+Aim: Don't forget the fine print.
+Do Now: What is the smallest variable type that could be used to store the following values (using standard sizes).
+
+	1) 5 char
+	2) -30,000 short
+	3) 255 short
+	4) 5,000,000,000 long 
+
+- if a variable is unsigned, it has a lower bound of 0 and an upper bound of the full width (ex. char = [0, 255], unsigned char c;)
+- all boolean values are numbers
+	0 == false, anything else == true
+- if (x = 6) {...} will assign 6 to x and return true; different from if   (x == 6) {...}
+- variables cannot be declared inside for loop statements, but they can be initialized
+- bus and segementation errors occur during run-time
+
+printf
+	the most important C function! prints formatted strings
+	printf(<string literal>, <var1), <var2> ...)
+	the first argument is always a string literal
+	simple printg does not need the <var> arguments
+	printf doesn't create  newlines
+	to print an integer, use the placeholder %d
+	to print a floating point, use the placeholder %f 
+		ex. printf("hello %d \n", x);
+
+- when you declare a variable in C, a random value within in its range is assigned.
+- $ gcc foo.c -lm
+- use -lm in command line to access math library; must be typed after target file
+- you can't evaluate functions in printf

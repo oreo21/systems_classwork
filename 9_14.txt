@@ -1,0 +1,25 @@
+Aim: Variables are the spice of life.
+Do Now: What are the primitive variable types in Java?
+
+	boolean (true/false)
+	floating point numbers (i.e. double, float)
+	integers (i.e. int, short, long, byte)
+	char
+
+C Primitive Variable Types:
+
+- all C primitives are numeric
+- the only difference is floating point vs. integer and size of variable
+- boolean and byte aren't primitive variable types in C
+- char is an integer type in C
+- size can be platform dependent
+	sizeof(<TYPE>) can be used to find the size in bytes
+	ex. sizeof(int)
+
+	char = 1 byte 
+	int = 4 bytes
+	short = 2 bytes
+	long = 8 bytes
+	float = 4 bytes
+	double = 8 bytes
+	

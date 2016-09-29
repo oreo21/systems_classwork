@@ -1,0 +1,38 @@
+Aim: What's the point of it all?
+
+Pointers:
+- variables designed to store memory addresses (think references in Java).
+- size is dependent on the processor (i.e. 64-bit)
+- * is used to declare a variable as a pointer type
+  ex. int *p
+      double *q
+      char *r
+- & is used to get the address of a variable
+
+Pointer Arithmetic:
+- declaring a pointer as a specific type allows you to add and subtract to the 
+  pointer by the size of its associated type
+
+  int *ip;
+  long *lp;
+  ip++; //will add 4 to ip
+  lp++; //will add 8 to lp
+
+- array variables are immutable pointers
+- to print a memory address, use the placeholder %p
+- array variables: value and address are the same
+ 
+De-reference:
+- *is also used as the de-reference operator 
+- it accesses the value at the memory location stored in the pointer
+- de-referencing has highest level of precedence below incremental operations
+
+  int i = 5;
+  int *ip = &i;
+  *ip++;  //this will set i to 6
+
+  darr[2] = *(dp + 2)
+  darr[2] = *(darr + 2) //same thing
+  2[darr] = *(2 + darr) // same thing; commutative
+
+brackets = add and de-reference

@@ -1,0 +1,16 @@
+
+
+Memory Management:
+
+- memory allocation either happens at compile time or at run time (dynamic).
+- compiler allocated memory = packaged with the binary of the program; there is
+  no standard default value
+- variables and arrays are allocated here (ex. float a, int b[5])
+
+Arrays:
+
+- must have a fixed size, cannot be set as a variable.
+- there is no length function.
+- there is no boundary checking.
+- in C, arrays are allocated at compile time; you have to give it a explicit, 
+  constant numerical size
