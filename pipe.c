@@ -2,23 +2,25 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#define READ 0
+#define WRITE 1
 
 int main(){
   int fds[2];
   pipe(fds);
   int f = fork();
   if (f == 0){
+    close(fds[WRITE]);
     printf("[child] listening\n");
-    close(fds[1]);
     char s[20];
-    read(fds[0], s, sizeof(s));
+    read(fds[READ], s, sizeof(s));
     printf("[child] got: %s\n", s);
   }
   else {
-    close(fds[0]);
+    close(fds[READ]);
     printf("[parent] sleeping\n");
     sleep(5);
-    write(fds[1], "hello there", 12);
+    write(fds[WRITE], "hello there", 12);
   }
   return 0;
 }
