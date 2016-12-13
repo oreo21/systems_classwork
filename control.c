@@ -12,11 +12,12 @@ union semun {
   struct seminfo *__buf;
 };
 
-struct sembuf { //you don't need to declare this
+/*struct sembuf { //you don't need to declare this
   short sem_op;
   short sem_num;
   short sem_flag;
 }
+*/
 
  int main(int argc, char* argv[]){
   int semid;
